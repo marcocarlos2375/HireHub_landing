@@ -1,0 +1,61 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Wix+Madefor+Text:wght@400;500;600;700&display=swap');
+
+/* Import Variables and Tailwind */
+@import "tailwindcss";
+@import './var.css';
+
+/* Base Styles */
+html {
+  font-family: var(--font-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--text-md);
+
+ color: var(--primary-950);
+}
+.bg-primary {
+    background-color: var(--primary-500);
+}
+.bg-primary-900 {
+    background-color: var(--primary-900);
+}
+.bg-primary-950 {
+    background-color: var(--primary-950);
+}  
+.bg-primary-100 {
+    background-color: var(--primary-100);
+} 
+.text-primary-50{
+  color: var(--primary-50);
+} 
+.text-primary-100{
+  color: var(--primary-100);
+}
+.bg-primary-100{
+  background-color: var(--primary-100);
+}
+.bg-primary-50{
+  background-color: var(--primary-50);
+}
+.text-primary{
+  color: var(--primary-500);
+}
+.font-heading{
+  font-family: var(--font-heading);
+}
+.text-primary-900{
+  color: var(--primary-900);
+}
+.font-light{
+  font-weight: var(--font-light);
+}
+.font-medium{
+  font-weight: var(--font-medium);
+}
