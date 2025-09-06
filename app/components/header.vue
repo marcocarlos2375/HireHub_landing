@@ -36,12 +36,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  <a v-for="item in callsToAction" :key="item.name" :href="item.href" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
-                    <component :is="item.icon" class="size-5 flex-none text-gray-400" aria-hidden="true" />
-                    {{ item.name }}
-                  </a>
-                </div>
+               
               </PopoverPanel>
             </transition>
           </Popover>
@@ -131,14 +126,13 @@
     SquaresPlusIcon,
     XMarkIcon,
   } from '@heroicons/vue/24/outline'
-  import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+  import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, DocumentIcon, UserGroupIcon, DocumentDuplicateIcon, VideoCameraIcon } from '@heroicons/vue/20/solid'
   
   const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+    { name: 'Cover Letter Builder', description: 'Create compelling cover letters tailored to your dream job', href: '/products/CoverLetterBuilder', icon: DocumentIcon },
+    { name: 'Live Coaching', description: 'Get personalized career guidance from expert coaches', href: '/products/LiveCoaching', icon: UserGroupIcon },
+    { name: 'Resume Builder', description: 'Build a professional resume that stands out', href: '/products/ResumeBuilder', icon: DocumentDuplicateIcon },
+    { name: 'Interview Simulation', description: 'Practice and perfect your interview skills', href: '/products/interviewSimulation', icon: VideoCameraIcon },
   ]
   const callsToAction = [
     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },

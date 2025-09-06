@@ -5,6 +5,97 @@
 @import "tailwindcss";
 @import './var.css';
 
+/* Custom volume slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.1);
+  height: 2px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.2);
+  height: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: scale(1.15);
+  background-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="range"]::-moz-range-track {
+  background: rgba(255, 255, 255, 0.1);
+  height: 2px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+input[type="range"]:hover::-moz-range-track {
+  background: rgba(255, 255, 255, 0.2);
+  height: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: scale(1.15);
+  background-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Progress bar animation */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.progress-bar-animate {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.1) 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
 /* Base Styles */
 html {
   font-family: var(--font-text);
