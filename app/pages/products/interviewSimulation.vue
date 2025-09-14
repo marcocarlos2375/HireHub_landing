@@ -1,41 +1,29 @@
 <template>
   <div>
-    <div class="relative isolate pt-14">
+    <div class="relative isolate  bg-primary-900 pt-14">
       <div class="py-24 sm:py-32 lg:pb-40">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Get Interview-Ready
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Get Interview-Ready
               with AI</h1>
-            <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">With our AI-powered interview
+            <p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">With our AI-powered interview
               simulation tool, you can practice your job interview skills and prepare for success.</p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <HbButton variant="primary">Get started</HbButton>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+              <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></a>
             </div>
+            <br></br>
+            <img src="/ill/interview.png" class="rounded-lg" alt=""></img>
           </div>
 
           <div class="simulation-container">
-            <Transition enter-active-class="transition ease-out duration-300" enter-from-class="opacity-0 translate-y-2"
-              enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-200"
-              leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-2">
-              <div v-if="loadingProgress > 0 && loadingProgress < 100"
-                class="fixed top-4 right-4 bg-gray-800 text-white px-4 py-3 rounded-lg shadow-lg z-50 w-64">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-sm font-medium">Loading audio files...</span>
-                  <span class="text-xs text-gray-400">{{ Math.round(loadingProgress) }}%</span>
-                </div>
-                <div class="h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                  <div class="h-full bg-primary transition-all duration-300 ease-out"
-                    :style="{ width: loadingProgress + '%' }"></div>
-                </div>
-              </div>
-            </Transition>
+           
           </div>
         </div>
       </div>
 
     </div>
-    <div class="mx-auto max-w-7xl  lg:px-8">
+    <div class="mx-auto max-w-7xl mt-8 lg:px-8">
       <div>
         <img src="/svg/prime/Mockup2.svg" class="rounded-lg" alt="">
       </div>
@@ -181,18 +169,7 @@
 </template>
 
 <style scoped>
-.simulation-container {
-  margin-top: 4rem;
-  width: 100%;
-  height: 600px;
-  border-radius: 0.5rem;
-  border: 8px solid #e9e9e9;
-  background-color: white;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 @media (min-width: 640px) {
   .simulation-container {
@@ -245,7 +222,8 @@ const people = [
     role: 'English',
     isPlaying: false,
     isLoading: false,
-    audioSample: '/audio/karim_neutral.mp3',
+    gtpvoice:"Fable",
+    audioSample: '/audio/karim.mp3',
     imageUrl: '/avatars/4.png',
   },
   {

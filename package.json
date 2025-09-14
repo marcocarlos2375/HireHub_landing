@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.380",
+    "netlify-cli": "^23.5.1",
     "nuxt-icon": "^1.0.0-beta.7",
     "sass-embedded": "^1.91.0"
   }
